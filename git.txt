@@ -1,0 +1,81 @@
+cat >> <file name> Some text (control + D end of texting)
+
+xcode-select --install
+ssh-keygen
+
+git init
+git status
+git add <file name>
+git commit -m '<commit massage>'
+https://www.conventionalcommits.org/
+
+git clone <repo address>
+
+git log <origin>/<main> ^<main> - difference between local and remote repos.
+git log --grep="<search word>" - search commits 
+git log --graph - show branches
+
+git remote -v - watch connections between repos
+git remote remove <remote repo name (origin)> - remove all connections between repos
+git remote add <remote repo name (origin)> <repo address> - add new repo
+Можно добавлять несколько удалённых репо (для отправки сразу в несколько).
+
+git push -u <remote repo name (origin)> <main> 
+git pull <origin> <main>
+git fetch (--all) - download without merging
+
+
+git branch <new branch name> - create new branch
+3-add-button (3 - task number, add-button - task)
+git branch - watch all the branches
+git checkout <branch name> - change branch
+
+git diff <file name> - changes in file (withot a commit)
+git diff - all changes in the directory (without a commit)
+git diff <commit> - изменения относительно текущей версии.
+git diff <earlier commit> <later commit> (<file name>) - difference in commits
+git diff <file name 1>  <file name 2> - difference between two files (outside git)
+
+git blame - file history (every single string)
+
+file .gitignore:
+<file name> - file
+*.<file type>> - all the .type files 
+<directory name>/ - ignore a directory 
+<directory name>/*.<file type>
+!<directory name>/<file name> - exeption in .gitignore
+
+git restore <file name> - delete changes before "git add" 
+git restore --staged <file name> - delete changes after "git add"
+git reset --hard - delete all not commited changes
+git clean -f - delete all untracked files
+
+git rm --cached <file name> - delete file from git (without deleting a file) after commit.
+
+git checkout <commit> <file name> - go to nedeed commit
+git revert <commit> - delete all changes in commit (:wq)
+git revert --no-commit <commit> - delete a few commits and only do one commit (about deleting)
+
+git reset --soft <commit> - delete next commit + file is in index
+git reset --mixed <commit> - delete next commit + file isn't in index
+git reset --hard <commit> - delete all next commits (all changes are deleted)
+git reset --merge <commit before merge> - delete merging
+
+git commit --amend -m '<message>' - change commit message
+git commit --amend --no-edit - add changes in last commit
+
+git stash - отложить изменения (файлов в индексе)
+git stash pop - do changes (last -> previous -> first)
+git stash list - watch a stash list 
+git stash drop - delete changes
+
+git merge <branch name> - merging with some branch. An other branch commits doesn't save.
+git merge <origin>/<main> - merge remote and local branches
+git merge --abort - cancel conflict merging 
+
+git rebase <branch> - move all commits from other branch
+git cherry-pick <commit> - move one needed commit from other branch
+
+
+
+
